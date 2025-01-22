@@ -1,0 +1,200 @@
+/* メインフォント*/
+
+.wf-mplus1p body { font-family: "M PLUS 1p"; }
+
+/* ローカルフォントの読み込み */
+@font-face {
+  font-family: 'LightNovelPOP';
+  src: url('../fonts/LightNovelPOPv2.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* HeroセクションのH1に適用 */
+.hero h1 {
+  font-family: 'LightNovelPOP', sans-serif !important; /* 新しいフォントを適用 */
+  font-size: 10vw; /* フォントサイズを調整 */
+  font-weight: normal;
+  color: #ffd700; /* 必要に応じて色を設定 */
+}
+
+.Main-text {
+  font-family: 'LightNovelPOP', sans-serif !important; /* 新しいフォントを適用 */
+}
+
+/* ロゴに適用 */
+.logo {
+  font-family: 'LightNovelPOP', sans-serif !important;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+/* 背景色 */
+
+.hero {
+  filter: brightness(100%);
+}
+
+.bg-red {
+    background-color: rgb(150 25 29) !important;
+}
+
+.bg-yellow {
+    background-color: rgb(255 193 7) !important;
+}
+
+/* ヘッダー */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1050;
+}
+
+/* ナビゲーションメニュー */
+#nav-menu {
+  top: 70px; /* ヘッダーの高さを設定 */
+  left: 0;
+  z-index: 1040;
+  background-color: #000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 少し影を追加 */
+}
+
+/* ナビゲーションリンク */
+#nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 10px;
+  display: block;
+}
+
+#nav-menu a:hover {
+  background-color: #444;
+}
+
+.hero {
+  background-image: url('../img/background.jpg'); /* ヒーロー背景画像 */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 40vw;
+}
+
+/* ヒーローセクション内のヘッダー */
+.hero-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  z-index: 10; /* 他の要素より上に配置 */
+}
+
+/* ロゴスタイル */
+.hero-header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* メニューボタンスタイル */
+.hero-header button {
+  border: 1px solid white;
+  color: white;
+  background-color: transparent;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.hero-header button:hover {
+  background-color: white;
+  color: black;
+}
+
+/* テキストの色 */
+.text-warning {
+  color: #ffd700 !important; /* 黄色の強調色 */
+}
+
+/* ボタンスタイル */
+.btn-warning {
+  background-color: #ffd700;
+  color: #000;
+  border: none;
+}
+
+.btn-warning:hover {
+  background-color: #ffc107;
+  color: #fff;
+}
+
+/* カードデザイン */
+.card {
+  border: 2px solid #ffd700;
+  background-color: #222; /* 背景色を暗めに */
+  color: #fff;
+}
+/* セクションの上下の余白 */
+section {
+  padding: 60px 20px;
+}
+
+/* カードの間隔 */
+.program-grid .card {
+  margin-bottom: 30px;
+}
+
+/* iPad以上のレイアウト調整 */
+@media (min-width: 768px) {
+  #nav-menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* 全体を中央に配置 */
+    align-items: center;    /* 縦方向の整列 */
+    gap: 20px;              /* 要素間の間隔 */
+  }
+
+  #nav-menu li {
+    flex: 0 0 calc(25% - 20px); /* 4列に均等配置 */
+    text-align: center;
+  }
+
+  #nav-menu a {
+    font-size: 1.2rem; /* リンクのフォントサイズを調整 */
+  }
+}
+
+/* スマホ用調整 */
+@media (max-width: 768px) {
+  .hero-header {
+    padding: 10px;
+  }
+
+  .hero-header .logo {
+    font-size: 1.2rem;
+  }
+
+  .hero-header button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+	.hero {
+	height: 70vw;
+	}
+}
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 12vw;
+  }
+	.hero h2 {
+    font-size: 5vw;
+  }
+
+  .program-grid .card {
+    margin-bottom: 20px;
+  }
+}
