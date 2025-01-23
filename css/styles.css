@@ -1,3 +1,7 @@
+body {
+  margin-top: -24px; /* ヘッダーとページ内容の調整 */
+}
+
 /* メインフォント*/
 
 .wf-mplus1p body { font-family: "M PLUS 1p"; }
