@@ -162,10 +162,29 @@ header {
 }
 
 /* カードデザイン */
+
+ body {
+  counter-reset: section-number; /* カウンターをリセット */
+}
+
 .card {
   border: 2px solid #ffd700;
   background-color: #222; /* 背景色を暗めに */
   color: #fff;
+}
+
+.card-title2::before {
+  content: "\f075"; /* Font Awesome のコメントアイコン（コード \f075） */
+  font-family: "Font Awesome 5 Free"; /* 必要に応じてバージョンを調整 */
+  font-weight: 900; /* アイコンのスタイル（通常: 400, 太字: 900） */
+  margin-right: 0.5rem; /* アイコンとテキストの間にスペースを追加 */
+  color: #6aa75f; /* アイコンの色 */
+}
+
+.card-title2::after {
+  content: " 証言＃" counter(section-number); /* 証言番号を自動で振る */
+  counter-increment: section-number; /* セクション番号をカウントアップ */
+  color: #6aa75f; /* 証言番号の色 */
 }
 
 .row {
@@ -230,6 +249,33 @@ section {
 
 .point:nth-child(7):after {
   content: '\f0eb  練習方法 ④';
+}
+
+/* shounin 見出しスタイル */
+
+.shounin {
+  position: relative;
+  display: inline-block;
+  padding: 0 55px;
+}
+
+.shounin:before, .shounin:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 45px;
+  height: 2px;
+  border-top: solid 1px black;
+  border-bottom: solid 1px black;
+}
+
+.shounin:before {
+  left:0;
+}
+
+.shounin:after {
+  right: 0;
 }
 
 /* 動画埋め込み用スタイル */
