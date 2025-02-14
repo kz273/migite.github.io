@@ -1,0 +1,560 @@
+body {
+  margin-top: -24px; /* ヘッダーとページ内容の調整 */
+}
+
+/* メインフォント*/
+
+.wf-mplus1p body { font-family: "M PLUS 1p"; }
+
+/* ローカルフォントの読み込み */
+@font-face {
+  font-family: 'LightNovelPOP';
+  src: url('../fonts/LightNovelPOPv2.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* HeroセクションのH1に適用 */
+.hero h1 {
+  font-family: 'LightNovelPOP', sans-serif !important; /* 新しいフォントを適用 */
+  font-size: 10vw; /* フォントサイズを調整 */
+  font-weight: normal;
+  color: #ffd700; /* 必要に応じて色を設定 */
+}
+
+.Main-text {
+  font-family: 'LightNovelPOP', sans-serif !important; /* 新しいフォントを適用 */
+}
+
+/* ロゴに適用 */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+/* SVGロゴのスタイル */
+.logo-icon {
+  height: auto; /* アスペクト比を維持 */
+  margin: 0; /* 外側の余白を削除 */
+  display: block; /* インライン要素としての余白を防ぐ */
+}
+
+/* タイトルのスタイル */
+.logo span {
+  margin-left: 10px; /* ロゴとタイトルの間隔 */
+  font-family: 'LightNovelPOP', sans-serif !important;
+}
+
+/* 背景色 */
+
+.hero {
+  filter: brightness(100%);
+}
+
+.bg-red {
+    background-color: rgb(150 25 29) !important;
+}
+
+.bg-yellow {
+    background-color: rgb(255 193 7) !important;
+}
+
+/* ヘッダー */
+header {
+  top: 0;
+  z-index: 1050;
+}
+
+/* ナビゲーションメニュー */
+#nav-menu {
+  top: 70px; /* ヘッダーの高さを設定 */
+  left: 0;
+  z-index: 1040;
+  background-color: #000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 少し影を追加 */
+}
+
+/* ナビゲーションリンク */
+#nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 10px;
+  display: block;
+}
+
+#nav-menu a:hover {
+  background-color: #444;
+}
+
+.hero {
+  background-image: url('../img/background.jpg'); /* ヒーロー背景画像 */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 40vw;
+}
+
+/* ヒーローセクション内のヘッダー */
+.hero-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  z-index: 10; /* 他の要素より上に配置 */
+}
+
+/* ロゴスタイル */
+.hero-header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* メニューボタンスタイル */
+.hero-header button {
+  border: 1px solid white;
+  color: white;
+  background-color: transparent;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.hero-header button:hover {
+  background-color: white;
+  color: black;
+}
+
+/* テキストの色 */
+.text-warning {
+  color: #ffd700 !important; /* 黄色の強調色 */
+}
+
+.highlight1 {
+    background-color: rgb(150 25 29); /* 明るい緑色 */
+    color: #fff; /* 濃紺色でコントラストを高める */
+    padding: 0.2em 0.4em;
+}
+
+.highlight2 {
+    background-color: #6aa75f; /* 鮮やかなピンク色 */
+    color: white; /* 白色文字 */
+    padding: 0.2em 0.4em;
+}
+
+.mark5{ background: linear-gradient(transparent 60%, #f6ff5f 60%);}
+
+/* ボタンスタイル */
+.btn-warning {
+  background-color: #ffd700;
+  color: #000;
+  border: none;
+}
+
+.btn-warning:hover {
+  background-color: #ffc107;
+  color: #fff;
+}
+
+/* カードデザイン */
+
+ body {
+  counter-reset: section-number; /* カウンターをリセット */
+}
+
+.card {
+  border: 2px solid #ffd700;
+  background-color: #222; /* 背景色を暗めに */
+  color: #fff;
+}
+
+.card-title2::before {
+  content: "\f075"; /* Font Awesome のコメントアイコン（コード \f075） */
+  font-family: "Font Awesome 5 Free"; /* 必要に応じてバージョンを調整 */
+  font-weight: 900; /* アイコンのスタイル（通常: 400, 太字: 900） */
+  margin-right: 0.5rem; /* アイコンとテキストの間にスペースを追加 */
+  color: #6aa75f; /* アイコンの色 */
+}
+
+.card-title2::after {
+  content: " 証言＃" counter(section-number); /* 証言番号を自動で振る */
+  counter-increment: section-number; /* セクション番号をカウントアップ */
+  color: #6aa75f; /* 証言番号の色 */
+}
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 1.5rem;
+}
+
+.bg-warning {
+    background-color: #f4f4f4 !important;
+}
+
+/* セクションの上下の余白 */
+section {
+  padding: 60px 20px;
+}
+
+/* カードの間隔 */
+.program-grid .card {
+  margin-bottom: 30px;
+}
+
+/* TOP見出しスタイル */
+
+.point {
+  position: relative;
+  border-top: solid 2px #6aa75f;
+  border-bottom: solid 2px #6aa75f;
+  background: #f4f4f4;
+  line-height: 1.4;
+  padding: 0.4em 0.5em;
+  margin: 1.7em 0 0.5em;
+}
+
+.point:after {
+  /*タブ*/
+  position: absolute;
+  font-family: "Font Awesome 5 Free",'Quicksand','Avenir','Arial',sans-serif;
+  font-weight: 900;
+  background: #6aa75f;
+  color: #fff;
+  left: 0px;
+  bottom: 100%;
+  border-radius: 5px 5px 0 0;
+  padding: 5px 7px 3px;
+  font-size: 0.7em;
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+
+/* 個別番号の割り当て */
+.point:nth-child(1):after {
+  content: '\f0eb  練習方法 ①';
+}
+
+.point:nth-child(3):after {
+  content: '\f0eb  練習方法 ②';
+}
+
+.point:nth-child(5):after {
+  content: '\f0eb  練習方法 ③';
+}
+
+.point:nth-child(7):after {
+  content: '\f0eb  練習方法 ④';
+}
+
+/* shounin 見出しスタイル */
+
+.shounin {
+  position: relative;
+  display: inline-block;
+  padding: 0 55px;
+}
+
+.shounin:before, .shounin:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 45px;
+  height: 2px;
+  border-top: solid 1px black;
+  border-bottom: solid 1px black;
+}
+
+.shounin:before {
+  left:0;
+}
+
+.shounin:after {
+  right: 0;
+}
+
+/* media 見出しスタイル */
+
+.ketsuron {
+    border: 1rem solid #094;
+    margin: 1.5rem 0;
+}
+
+.ketsuron h3 {
+  position: relative;
+  padding: 1.5rem 1rem;
+}
+
+.ketsuron h3:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  content: '';
+  background-image: -webkit-repeating-linear-gradient(135deg, #094, #094 1px, transparent 2px, transparent 5px);
+  background-image: repeating-linear-gradient(-45deg, #094, #094 1px, transparent 2px, transparent 5px);
+  background-size: 7px 7px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.ketsuron img {
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+th {
+    background-color: #f5f5f5;
+    text-align: left;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+td {
+    text-align: left;
+}
+
+/* 動画埋め込み用スタイル */
+.video-wrapper {
+  display: flex;
+  justify-content: center; /* 中央寄せ */
+  align-items: center;
+  width: 100%; /* 親要素幅に依存 */
+}
+
+.video-wrapper iframe {
+  width: 80%; /* 動画幅を80%に設定 */
+  max-width: 720px; /* 最大幅を制限 */
+  height: auto; /* 高さを自動調整 */
+  aspect-ratio: 16/9; /* アスペクト比を維持 */
+  border: none; /* 枠線を削除 */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* 影を追加 */
+  border-radius: 10px; /* 角を丸くする */
+}
+
+/* 画像とテキスト配置用スタイル */
+#golf-grip img {
+  max-width: 100%; /* 画像をコンテナ内でフィット */
+  height: auto; /* アスペクト比を維持 */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* 影を追加 */
+  border-radius: 8px; /* 角を丸くする */
+}
+
+#golf-grip h2 {
+  margin-bottom: 1rem; /* 見出し下の余白を設定 */
+}
+
+#golf-grip p {
+  margin-bottom: 1rem; /* 段落間の余白を設定 */
+  line-height: 1.6; /* 行間を調整 */
+}
+
+/* innerページ */
+.inner-h2 {
+    position: relative;
+    padding: 1rem 2rem;
+    color: #fff;
+    border-radius: 10px;
+    background: #094;
+    margin-bottom: 2rem;
+}
+
+.inner-h2 h2:after {
+  position: absolute;
+  bottom: -9px;
+  left: 1em;
+  width: 0;
+  height: 0;
+  content: '';
+  border-width: 10px 10px 0 10px;
+  border-style: solid;
+  border-color: #094 transparent transparent transparent;
+}
+
+/* effectページ */
+
+.migiteabout_text {
+  background: #f1f1f1;
+  margin-bottom: 3rem;
+}
+
+.migiteabout_text h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.red_arrow {
+  display: inline-block;
+  width: 120px;
+  height: 100px;
+  background: #d9534f;
+  clip-path: polygon(0 31%, 63.2% 31%, 63.2% 0, 100% 50%, 63.2% 100%, 63.2% 69%, 0 69%);
+  margin: 0 20px; /* 矢印の左右の余白 */
+}
+
+.item_text {
+  max-width: 300px; /* テキストブロックの最大幅を設定 */
+  text-align: center;
+}
+
+ol li {
+  margin-bottom: 0.5rem; /* 各リストアイテムの間隔 */
+}
+
+ol li span {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.bg-effect {
+	border-radius: 10rem;
+    background: #d9534f;
+    color: #fff;
+    flex: 1;
+    font-weight: bold;
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.5rem;
+}
+.text-danger {
+	text-align: center;
+	font-weight: bold;
+}
+
+/* Modalのレイアウト調整 */
+
+.gallery-container {
+            margin-top: 20px;
+        }
+        .gallery-item {
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        .modal-img {
+            width: 100%;
+            height: auto;
+        }
+
+/* 特定商取引法ページ　タイトル */
+.hTxt {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #094; /* 緑のタイトル */
+    margin-bottom: 20px;
+}
+
+/* 見出しタイトルの緑色 */
+.moduleArea {
+  padding: 0.25em 0.5em;/*上下 左右の余白*/
+  color: #494949;/*文字色*/
+  background: transparent;/*背景透明に*/
+  border-left: solid 5px #094;/*左線*/
+}
+
+/* リンクスタイル */
+.notes a {
+    color: #0f8c34;
+    text-decoration: underline;
+}
+
+.notes a:hover {
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .d-flex {
+    flex-direction: column;
+  }
+
+  .red_arrow {
+    margin: 1rem 0;
+  }
+}
+
+/* iPad以上のレイアウト調整 */
+@media (min-width: 768px) {
+  #nav-menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* 全体を中央に配置 */
+    align-items: center;    /* 縦方向の整列 */
+    gap: 20px;              /* 要素間の間隔 */
+  }
+
+  #nav-menu li {
+    flex: 0 0 calc(20% - 20px); /* 4列に均等配置 */
+    text-align: center;
+  }
+
+  #nav-menu a {
+    font-size: 1.1rem; /* リンクのフォントサイズを調整 */
+  }
+	.logo-icon {
+    width: 120px; /* モバイル画面で縮小 */
+  }
+}
+
+/* スマホ用調整 */
+@media (max-width: 768px) {
+  .hero-header {
+    padding: 10px;
+  }
+
+  .hero-header .logo {
+    font-size: 1.2rem;
+  }
+
+  .hero-header button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+	.hero {
+	height: 70vw;
+	}
+	.logo-icon {
+    width: 100px; /* モバイル画面で縮小 */
+  }
+	.logo span {
+  display: none;
+}
+	.red_arrow {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 12vw;
+  }
+	.hero h2 {
+    font-size: 5vw;
+  }
+  .program-grid .card {
+    margin-bottom: 20px;
+  }
+	.logo span {
+  display: none;
+}
+	.red_arrow {
+    display: none;
+  }
+}
