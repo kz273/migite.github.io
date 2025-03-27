@@ -274,6 +274,7 @@ section {
   line-height: 1.4;
   padding: 0.4em 0.5em;
   margin: 1.7em 0 0.5em;
+  font-size: 18px;
 }
 
 .point:after {
@@ -424,9 +425,13 @@ td {
 }
 
 /* innerページ */
+.inner-h2 h2 {
+	font-size:1.2rem;
+}
+
 .inner-h2 {
     position: relative;
-    padding: 1rem 2rem;
+    padding: 0.6rem 0rem;
     color: #fff;
     border-radius: 10px;
     background: #094;
