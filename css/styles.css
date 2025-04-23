@@ -157,7 +157,7 @@ header {
 }
 
 /* TOPに戻るボタンスタイル */
-button {
+.page-top {
   position: fixed;
   display: flex;
   align-items: center;
@@ -178,9 +178,10 @@ button {
   visibility: hidden;
   transition: .2s;
   letter-spacing: 1px;
+　z-index: 999;
 }
 
-.is-active {
+.page-top.is-active {
   opacity: 1;
   visibility: visible;
 }
