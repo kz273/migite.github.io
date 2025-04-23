@@ -156,6 +156,35 @@ header {
   color: black;
 }
 
+/* TOPに戻るボタンスタイル */
+button {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 20px;
+  bottom: 20px;
+  width: 80px;
+  height: 80px;
+  font-size: 16px;
+  padding-top: 6px;
+  font-weight: bold;
+  color: #222;
+  background: #ffd700;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: .2s;
+  letter-spacing: 1px;
+}
+
+.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
 /* テキストの色 */
 .text-warning {
   color: #ffd700 !important; /* 黄色の強調色 */
