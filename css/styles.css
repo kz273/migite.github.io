@@ -419,6 +419,41 @@ td {
     text-align: left;
 }
 
+/* ▼ レスポンシブ：466px以下はブロック形式に切り替え */
+@media screen and (max-width: 466px) {
+  table,
+  tbody,
+  tr,
+  th,
+  td {
+    display: block;
+    width: 100%;
+  }
+
+  table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    padding: 0.75em;
+    border: none;
+    border-top: 1px solid #ccc;
+  }
+
+  table td {
+    padding: 0.75em 1em;
+    border: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  /* h5などの段組は行間調整だけ */
+  td h5.moduleArea {
+    font-size: 1rem;
+    margin-top: 1em;
+    border-left: 4px solid #0aaf3a;
+    padding-left: 0.5em;
+  }
+}
+
+
 /* 動画埋め込み用スタイル */
 .video-wrapper {
   display: flex;
