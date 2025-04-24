@@ -419,8 +419,8 @@ td {
     text-align: left;
 }
 
-/* ▼ レスポンシブ：466px以下はブロック形式に切り替え */
-@media screen and (max-width: 466px) {
+/* ▼ レスポンシブ：480px以下はブロック形式に切り替え */
+@media screen and (max-width: 480px) {
   table,
   tbody,
   tr,
